@@ -17,14 +17,16 @@
         <div class="px-4 pt-5 my-5 text-center">
         <h1 class="display-4 fw-bold">A3AJAGBE Link Shortener</h1>
             <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap,.</p>
-                <form class="p-5 border rounded-3 bg-light">
+                <p class="lead mb-4">Quickly and easily reduce the length of a website url.</p>
+                <form class="p-5 border rounded-3 bg-light" method="POST">
                     <div class="form-floating mb-3">
-                        <input type="url" class="form-control" id="floatingInput" placeholder="name@example.com" name="long_url">
+                        <input type="url" class="form-control" id="floatingInput" placeholder="http://www.aminatajagbe.com/" name="long_url">
                         <label for="floatingInput">Website URL</label>
                     </div>
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Shorten</button>
                 </form>
+                <h2 class="pt-5">Short URL: {{ short_url }}</h2>
+                <small>This url is already copied to your clipboard. Just Paste it.</small>
             </div>
         </div>
     </div>
