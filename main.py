@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, flash
 import os
 import requests
-import pyperclip
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -27,7 +26,6 @@ def index():
 
         response = requests.post(BITLY_ENDPOINT, json=PARAMETERS, headers=HEADERS)
         data = response.json()
-        pyperclip.copy(data['link'])
         short_url = data['link']
         flash(f"{short_url}", "success")
     return render_template('index.html')
